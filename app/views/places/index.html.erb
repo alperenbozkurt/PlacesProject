@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table class="table">
+	<% @places.each do |p| %>
+	<tr>
+		<td><%= p.name %></td>
+		<td><%= p.address %></td>
+		<td><%= p.established_at %></td>
+		<td><%= p.phone_number %></td>
+		<td><%= p.contract_mail %></td>
+		<td><%= p.city %></td>
+		<td><%= p.description %></td>
+	</tr>
+	<% end %>
+</table>
+</body>
+</html>
