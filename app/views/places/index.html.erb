@@ -7,12 +7,12 @@
 <table class="table">
 	<% @places.each do |p| %>
 	<tr>
-		<td><%= p.name %></td>
+		<td><a href="/show/<%= p.id %>"><%= p.name %></a></td>
 		<td><%= p.address %></td>
 		<td><%= p.established_at %></td>
 		<td><%= p.phone_number %></td>
 		<td><%= p.contract_mail %></td>
-		<td><%= p.city %></td>
+		<td><%= p.city %>/td>
 		<td><%= p.description %></td>
 	</tr>
 	<% end %>
