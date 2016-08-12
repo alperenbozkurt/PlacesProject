@@ -1,0 +1,14 @@
+<h1>Edit a place</h1>
+<% if @place.errors.any? %>
+<%=  	@place.errors.full_messages.join(",") %><br>
+<% end %>
+<form action="<%= place_path %>" method="POST">
+	<input type="text" name="name" value="<%= @place.name %>"><br>
+	<input type="text" name="address" value="<%= @place.address %>"><br>
+	<input type="text" name="established_at" value="<%= @place.established_at %>"><br>
+	<input type="text" name="phone_number" value="<%= @place.phone_number %>"><br>
+	<input type="text" name="contract_mail" value="<%= @place.contract_mail %>"><br>
+	<input type="text" name="city" value="<%= @place.city %>"><br>
+	<input type="text" name="description" value="<%= @place.description %>"><br>
+	<button type="submit" name="button">Kaydet</button><br>
+</form>
