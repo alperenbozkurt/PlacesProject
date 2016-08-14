@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+<%  flash.each do |m| %>
+<%=   m[1] %>
+<%  end %>
 <table class="table">
 	<% @places.each do |p| %>
 	<tr>
@@ -17,5 +14,3 @@
 	</tr>
 	<% end %>
 </table>
-</body>
-</html>

@@ -1,0 +1,11 @@
+<h1><%= @category.name %></h1>
+<table class="table">
+<% @category.places.each do |place| %>
+  <tr>
+    <td><%= place.id %></td>
+    <td><%= link_to place.name, place_path(place) %></td>
+    <td><%= place.description %> </td>
+  </tr>
+<% end %>
+
+</table>

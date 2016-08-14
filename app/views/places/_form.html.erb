@@ -1,0 +1,20 @@
+<%= form_for @place do |f| %>
+	<%= f.label 'name : ' %>
+	<%= f.text_field :name, placeholder: 'title' %><br>
+		<%= f.label 'Address : ' %>
+	<%= f.text_field :address, placeholder: 'address' %><br>
+		<%= f.label 'Established At : ' %>
+	<%= f.text_field :established_at %><br>
+		<%= f.label 'Phone Number : ' %>
+	<%= f.text_field :phone_number, placeholder: 'phone_number' %><br>
+		<%= f.label 'Mail : ' %>
+	<%= f.text_field :contract_mail, placeholder: 'contract_mail' %><br>
+		<%= f.label 'City : ' %>
+	<%= f.text_field :city, placeholder: 'city' %><br>
+		<%= f.label 'Description : ' %>
+	<%= f.text_field :description, placeholder: 'description' %><br>
+		<%= f.label 'Kategori : ' %>
+	<%= f.select :category_id, @categories %><br>
+
+	<%= f.submit 'Gonder'%><br>
+<% end %>

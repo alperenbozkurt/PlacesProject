@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+
 <h1>Burası  Show</h1>
+<%  flash.each do |m| %>
+<%=   m[1] %>
+<%  end %>
 <table class="table">
 	<tr>
+		<td><%= @place.id %></td>
 		<td><%= @place.name %></td>
 		<td><%= @place.address %></td>
 		<td><%= @place.established_at %></td>
@@ -14,7 +13,19 @@
 		<td><%= @place.contract_mail %></td>
 		<td><%= @place.city %></td>
 		<td><%= @place.description %></td>
+		<td><%= link_to "Güncelle", edit_place_path(@place) %></td>
+		<td><%= link_to "Sil", place_path(@place), method: :delete %></td>
 	</tr>
 </table>
-</body>
-</html>
+<h4>Yorumlar</h4><hr>
+<% @place.comments.each do |e| %>
+<%=	e.body %><br>
+<% end %>
+<h4>Yorum Yap</h4><hr>
+
+
+<form action="<%= comments_path %>" method="post">
+	<textarea name="body" rows="8" cols="40"></textarea>
+	<input type="hidden" name="place_id" value="<%= @place.id %>">
+	<input type="submit" name="name" value="Gonder">
+</form>

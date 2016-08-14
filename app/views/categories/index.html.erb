@@ -1,0 +1,10 @@
+<%  flash.each do |m| %>
+<%=   m[1] %>
+<%  end %>
+<table class="table">
+	<% @categories.each do |c| %>
+	<tr>
+		<td><a href="<%= category_path(c) %>"><%= c.name %></a></td>
+	</tr>
+	<% end %>
+</table>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  custumer_id: MyString
+  place_id: MyString
+  body: MyString
+
+two:
+  custumer_id: MyString
+  place_id: MyString
+  body: MyString
